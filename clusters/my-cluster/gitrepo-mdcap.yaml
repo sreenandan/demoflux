@@ -2,9 +2,9 @@ apiVersion: source.toolkit.fluxcd.io/v1beta1
 kind: GitRepository
 metadata:
   name: mdcap
-  namespace: test7
+  namespace: demo10
 spec:
   interval: 30s
   ref:
-    branch: orion-demo
-  url: https://github.com/RobinSystems/dcap
+    branch: master
+  url: https://github.com/sreenandan/mdcap

@@ -6,5 +6,5 @@ metadata:
 spec:
   interval: 30s
   ref:
-    branch: master
+    branch: orion-demo
   url: https://github.com/RobinSystems/dcap

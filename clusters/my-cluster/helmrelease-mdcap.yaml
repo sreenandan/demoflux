@@ -13,10 +13,7 @@ spec:
         kind: GitRepository
         name: mdcap
         namespace: demo10
-      interval: 1m
-  test:
-    enable: true
-    ignoreFailures: true      
+      interval: 1m 
   values:
     externalIp: 10.9.53.137
     nginx:

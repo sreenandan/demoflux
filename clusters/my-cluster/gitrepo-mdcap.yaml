@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: mdcap
+  namespace: demo11
+spec:
+  interval: 30s
+  ref:
+    branch: main
+  url: https://github.com/sreenandan/mdcap

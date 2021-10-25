@@ -1,0 +1,30 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: mdcap
+  namespace: default
+spec:
+  interval: 1m
+  chart:
+    spec:
+      chart: ./charts/mdcap
+      sourceRef:
+        kind: GitRepository
+        name: mdcap
+        namespace: demo11
+      interval: 1m
+  values:
+    externalIp: 10.9.53.137
+    nginx:
+      env:
+        httpsNodePort: '30444'
+        httpNodePort: '30080'
+    postgres:
+      user: postgres
+      password: patron
+      server: 10.9.53.137
+      database: postgres
+      port: '6321'
+      readport: '6323'
+    vmetrics:
+      enabled: true
